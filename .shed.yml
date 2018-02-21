@@ -1,0 +1,7 @@
+categories: [Epigenetics]
+description: Extract phenotype data from a ballgown object and return sample-by-phenotype
+  data frame
+homepage_url: https://github.com/kpbioteam/minfi_pheno
+name: minfi_pheno
+owner: kpbioteam
+remote_repository_url: https://github.com/kpbioteam/minfi_pheno

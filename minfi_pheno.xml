@@ -1,0 +1,27 @@
+<tool id="minfi_pheno" name="minfi_pheno" version="0.1.0">
+    <description>extract phenotype data from a ballgown object</description>
+    <requirements>
+        <requirement type="package" version="1.24.0">bioconductor-minfi</requirement>
+    </requirements>
+    <command detect_errors="exit_code"><![CDATA[
+        Rscript  ${__tool_directory__}/minfi_pheno.R  "$input1" "$output1"
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" format="rdata" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="txt" />
+    </outputs>
+    <tests>
+        <test>
+            <param name="input1" value="GRSet.rdata"/>
+            <output name="output1" file="phenodata.txt"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+        Extract phenotype data from a ballgown object and return sample-by-phenotype data frame
+    ]]></help>
+    <citations>
+        <citation type="doi">10.1093/bioinformatics/btu049</citation>
+    </citations>
+</tool>
